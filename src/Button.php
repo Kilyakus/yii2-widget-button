@@ -26,7 +26,9 @@ use yii\helpers\Inflector;
 class Button extends \yii\bootstrap\Button
 {
     public $pluginName = 'button';
-
+    /**
+     *  Button bootstrap types
+     */
     const TYPE_DEFAULT = 'default';
     const TYPE_BRAND = 'brand';
     const TYPE_DANGER = 'danger';
@@ -38,6 +40,9 @@ class Button extends \yii\bootstrap\Button
     const TYPE_SUCCESS = 'success';
     const TYPE_WARNING = 'warning';
 
+    /**
+     * Button sizes
+     */
     const SIZE_MINI = 'xs';
     const SIZE_SMALL = 'sm';
     const SIZE_LARGE = 'lg';
@@ -45,20 +50,48 @@ class Button extends \yii\bootstrap\Button
     const ICON_POSITION_LEFT = 'left';
     const ICON_POSITION_RIGHT = 'right';
 
+    /**
+     * @var string The button size.
+     * Valid values are 'xs', 'sm', 'lg'.
+     */
     public $size;
 
+    /**
+     * @var string The button type.
+     * Valid values for engine styles are 'default', 'red', 'blue', 'green', 'yellow', 'purple', 'dark'.
+     * Valid values for bootstrap styles are 'primary', 'info', 'success', 'warning', 'danger', 'inverse', 'link'.
+     */
     public $type = self::TYPE_DEFAULT;
 
-    public $color = 'btn-default';
+    /**
+     * @var string color
+     */
+    public $color = '';
 
+    /**
+     * @var string The button icon.
+     */
     public $icon;
 
+    /**
+     * @var string Icon position.
+     * Valid values are 'left', 'right'.
+     */
     public $iconPosition = self::ICON_POSITION_LEFT;
 
+    /**
+     * @var bool Indicates whether button is disabled or not.
+     */
     public $disabled = false;
 
+    /**
+     * @var bool Indicates whether the button should span the full width of the a parent.
+     */
     public $block = false;
 
+    /**
+     * @var bool Indicates whether the dropdown shoud expand on hover.
+     */
     public $hover = false;
 
     private $_sizes = [
@@ -80,6 +113,9 @@ class Button extends \yii\bootstrap\Button
         self::TYPE_WARNING,
     ];
 
+    /**
+     * Initializes the widget.
+     */
     public function init()
     {
         parent::init();
