@@ -50,7 +50,7 @@ class Button extends \yii\bootstrap\Button
     const ICON_POSITION_LEFT = 'left';
     const ICON_POSITION_RIGHT = 'right';
 
-    public $title = 'button';
+    public $title;
 
     /**
      * @var string The button size.
@@ -152,7 +152,7 @@ class Button extends \yii\bootstrap\Button
             Html::addCssClass($this->options, 'btn-icon btn-circle');
         }
 
-        if(!isset($this->options['type']))
+        if(!isset($this->options['type']) && ($this->tagName == 'button' || $this->tagName == 'input'))
         {
             $this->options['type'] = 'button';
         }
