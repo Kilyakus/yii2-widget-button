@@ -13,14 +13,18 @@ use yii\helpers\Inflector;
  *
  * ```php
  * echo Button::widget([
- *     'title' => 'Action',
- *     'icon' => 'fa fa-folder',
- *     'iconPosition' => Button::ICON_POSITION_LEFT,
- *     'size' => Button::SIZE_SMALL,
+ *     'title' => 'label',
+ *     'icon' => 'fa fa-cog',
+ *     'iconPosition' => Widget\Button::ICON_POSITION_LEFT,
+ *     'type' => Widget\Button::TYPE_PRIMARY,
+ *     'size' => Widget\Button::SIZE_MINI,
  *     'disabled' => false,
  *     'block' => false,
- *     'type' => Button::TYPE_DANGER,
- * ]);
+ *     'outline' => true,
+ *     'hover' => true,
+ *     'circle' => true,
+ *     'options' => ['type' => 'submit'],
+ * ])
  * ```
  */
 class Button extends \yii\bootstrap\Button
