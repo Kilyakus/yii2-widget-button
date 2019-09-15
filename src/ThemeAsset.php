@@ -1,9 +1,7 @@
 <?php
 namespace kilyakus\button;
 
-use kilyakus\widgets\AssetBundle;
-
-class ThemeAsset extends AssetBundle
+class ThemeAsset extends \kilyakus\widgets\AssetBundle
 {
     public $depends = [
         'kilyakus\button\ButtonAsset'
