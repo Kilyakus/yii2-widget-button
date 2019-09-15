@@ -50,7 +50,7 @@ class Button extends \yii\bootstrap\Button
     const ICON_POSITION_LEFT = 'left';
     const ICON_POSITION_RIGHT = 'right';
 
-    public $title;
+    public $title = 'button';
 
     /**
      * @var string The button size.
