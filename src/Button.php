@@ -61,6 +61,7 @@ class Button extends \yii\bootstrap\Button
      * Valid values for bootstrap styles are 'primary', 'info', 'success', 'warning', 'danger', 'inverse', 'link'.
      */
     public $type = self::TYPE_DEFAULT;
+    public $combine;
 
     public $color = '';
 
@@ -71,9 +72,9 @@ class Button extends \yii\bootstrap\Button
 
     public $block = false;
 
-    public $outline = false;
-
     public $hover = false;
+
+    public $outline = false;
 
     public $elevate = false;
 
@@ -82,6 +83,8 @@ class Button extends \yii\bootstrap\Button
     public $pill = false;
 
     public $label = false;
+
+    public $circle = false;
 
     private $_sizes = [
         self::SIZE_MINI,
@@ -109,10 +112,19 @@ class Button extends \yii\bootstrap\Button
     {
         parent::init();
 
-        if (static::TYPE_DEFAULT !== $this->type)
+        $this->combine = $this->type;
+
+        if ($this->hover === true)
         {
-            Html::addCssClass($this->options, sprintf('btn-%s', $this->type));
+            $this->combine = 'hover-' . $this->combine;
         }
+
+        if ($this->outline === true)
+        {
+            $this->combine = 'outline-' . $this->combine;
+        }
+
+        Html::addCssClass($this->options, sprintf('btn-%s', $this->combine));
 
         Html::addCssClass($this->options, $this->color);
 
@@ -130,6 +142,12 @@ class Button extends \yii\bootstrap\Button
         {
             Html::addCssClass($this->options, 'btn-block');
         }
+
+        if ($this->circle === true)
+        {
+            Html::addCssClass($this->options, 'btn-icon btn-circle');
+        }
+
         if(!isset($this->options['type']))
         {
             $this->options['type'] = 'button';
