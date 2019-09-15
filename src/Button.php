@@ -13,7 +13,7 @@ use yii\helpers\Inflector;
  *
  * ```php
  * echo Button::widget([
- *     'label' => 'Action',
+ *     'title' => 'Action',
  *     'icon' => 'fa fa-folder',
  *     'iconPosition' => Button::ICON_POSITION_LEFT,
  *     'size' => Button::SIZE_SMALL,
@@ -40,15 +40,14 @@ class Button extends \yii\bootstrap\Button
     const TYPE_SUCCESS = 'success';
     const TYPE_WARNING = 'warning';
 
-    /**
-     * Button sizes
-     */
     const SIZE_MINI = 'xs';
     const SIZE_SMALL = 'sm';
     const SIZE_LARGE = 'lg';
 
     const ICON_POSITION_LEFT = 'left';
     const ICON_POSITION_RIGHT = 'right';
+
+    public $title;
 
     /**
      * @var string The button size.
@@ -63,36 +62,26 @@ class Button extends \yii\bootstrap\Button
      */
     public $type = self::TYPE_DEFAULT;
 
-    /**
-     * @var string color
-     */
     public $color = '';
 
-    /**
-     * @var string The button icon.
-     */
     public $icon;
-
-    /**
-     * @var string Icon position.
-     * Valid values are 'left', 'right'.
-     */
     public $iconPosition = self::ICON_POSITION_LEFT;
 
-    /**
-     * @var bool Indicates whether button is disabled or not.
-     */
     public $disabled = false;
 
-    /**
-     * @var bool Indicates whether the button should span the full width of the a parent.
-     */
     public $block = false;
 
-    /**
-     * @var bool Indicates whether the dropdown shoud expand on hover.
-     */
+    public $outline = false;
+
     public $hover = false;
+
+    public $elevate = false;
+
+    public $air = false;
+
+    public $pill = false;
+
+    public $label = false;
 
     private $_sizes = [
         self::SIZE_MINI,
@@ -150,15 +139,15 @@ class Button extends \yii\bootstrap\Button
 
     public function run()
     {
-        $label = $this->encodeLabel ? Html::encode($this->label) : $this->label;
+        $title = $this->encodeLabel ? Html::encode($this->title) : $this->title;
 
         if ($this->icon !== null)
         {
             $icon = Html::tag('i', '', ['class' => $this->icon]);
-            $label = strcasecmp($this->iconPosition, self::ICON_POSITION_LEFT) === 0 ? sprintf('%s %s', $icon, $label) : sprintf('%s %s', $label, $icon);
+            $title = strcasecmp($this->iconPosition, self::ICON_POSITION_LEFT) === 0 ? sprintf('%s %s', $icon, $title) : sprintf('%s %s', $title, $icon);
         }
 
-        echo Html::tag($this->tagName, $label, $this->options);
+        echo Html::tag($this->tagName, $title, $this->options);
 
         $this->registerPlugin('button');
         $this->registerAssets();
