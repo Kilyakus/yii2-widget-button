@@ -1,0 +1,16 @@
+{
+    "name": "kilyakus/yii2-widget-button",
+    "type": "yii2-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Edited: Kilyakus",
+            "email": "aleksandr.kilyakov@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "kilyakus\\button\\": "src"
+        }
+    }
+}
