@@ -1,14 +1,12 @@
 <?php
 namespace kilyakus\button;
 
-use kilyakus\widgets\AssetBundle;
-
-class ThemeBrandAsset extends ThemeAsset
+class ThemeBrandAsset extends \kilyakus\widgets\AssetBundle
 {
     public function init()
     {
         $this->setSourcePath(__DIR__ . '/assets');
-        $this->setupAssets('css', ['css/button-brand']);
+        $this->setupAssets('css', ['css/button-brand'],'widget-button-theme-brand');
         parent::init();
     }
 }

@@ -1,14 +1,12 @@
 <?php
 namespace kilyakus\button;
 
-use kilyakus\widgets\AssetBundle;
-
-class ThemeLinkAsset extends ThemeAsset
+class ThemeLinkAsset extends \kilyakus\widgets\AssetBundle
 {
     public function init()
     {
         $this->setSourcePath(__DIR__ . '/assets');
-        $this->setupAssets('css', ['css/button-link']);
+        $this->setupAssets('css', ['css/button-link'],'widget-button-theme-link');
         parent::init();
     }
 }

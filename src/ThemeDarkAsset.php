@@ -1,14 +1,12 @@
 <?php
 namespace kilyakus\button;
 
-use kilyakus\widgets\AssetBundle;
-
-class ThemeDarkAsset extends ThemeAsset
+class ThemeDarkAsset extends \kilyakus\widgets\AssetBundle
 {
     public function init()
     {
         $this->setSourcePath(__DIR__ . '/assets');
-        $this->setupAssets('css', ['css/button-dark']);
+        $this->setupAssets('css', ['css/button-dark'],'widget-button-theme-dark');
         parent::init();
     }
 }

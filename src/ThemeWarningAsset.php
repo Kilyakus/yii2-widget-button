@@ -1,14 +1,12 @@
 <?php
 namespace kilyakus\button;
 
-use kilyakus\widgets\AssetBundle;
-
-class ThemeWarningAsset extends ThemeAsset
+class ThemeWarningAsset extends \kilyakus\widgets\AssetBundle
 {
     public function init()
     {
         $this->setSourcePath(__DIR__ . '/assets');
-        $this->setupAssets('css', ['css/button-warning']);
+        $this->setupAssets('css', ['css/button-warning'],'widget-button-theme-warning');
         parent::init();
     }
 }
