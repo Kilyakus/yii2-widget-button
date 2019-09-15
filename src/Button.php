@@ -1,9 +1,10 @@
 <?php
-namespace kilyakus\button\Button;
+namespace kilyakus\button;
 
 use Yii;
 use yii\base\InvalidConfigException;
 use yii\helpers\Html;
+use yii\helpers\Inflector;
 
 /**
  * Button renders a engine button.
@@ -18,7 +19,7 @@ use yii\helpers\Html;
  *     'size' => Button::SIZE_SMALL,
  *     'disabled' => false,
  *     'block' => false,
- *     'type' => Button::TYPE_M_BLUE,
+ *     'type' => Button::TYPE_DANGER,
  * ]);
  * ```
  */
@@ -167,8 +168,8 @@ class Button extends \yii\bootstrap\Button
     {
         $view = $this->getView();
         ButtonAsset::register($view);
-        if (in_array($this->theme, self::$_inbuiltThemes)) {
-            $bundleClass = __NAMESPACE__ . '\Theme' . Inflector::id2camel($this->theme) . 'Asset';
+        if (in_array($this->type, self::$_inbuiltTypes)) {
+            $bundleClass = __NAMESPACE__ . '\Theme' . Inflector::id2camel($this->type) . 'Asset';
             $bundleClass::register($view);
         }
     }
