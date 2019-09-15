@@ -9,11 +9,6 @@
 a.btn.disabled,
 fieldset:disabled a.btn {pointer-events:none;}
 
-.btn-link {font-weight:400;color:#2986FF;text-decoration:none;}
-  .btn-link:hover {color:#2739c1;text-decoration:underline;}
-  .btn-link:focus, .btn-link.focus {text-decoration:underline;box-shadow:none;}
-  .btn-link:disabled, .btn-link.disabled {color:#6c757d;pointer-events:none;}
-
 .btn-lg, .btn-group-lg > .btn {padding:1.15rem 1.65rem;font-size:1.25rem;line-height:1.5;border-radius:0.3rem;}
 
 .btn-sm, .btn-group-sm > .btn {padding:0.5rem 1rem;font-size:0.875rem;line-height:1.5;border-radius:0.2rem;}

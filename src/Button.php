@@ -30,15 +30,14 @@ use yii\helpers\Inflector;
 class Button extends \yii\bootstrap\Button
 {
     public $pluginName = 'button';
-    /**
-     *  Button bootstrap types
-     */
+
     const TYPE_DEFAULT = 'default';
     const TYPE_BRAND = 'brand';
     const TYPE_DANGER = 'danger';
     const TYPE_DARK = 'dark';
     const TYPE_INFO = 'info';
     const TYPE_LIGHT = 'light';
+    const TYPE_LINK = 'link';
     const TYPE_PRIMARY = 'primary';
     const TYPE_SECONDARY = 'secondary';
     const TYPE_SUCCESS = 'success';
@@ -61,8 +60,8 @@ class Button extends \yii\bootstrap\Button
 
     /**
      * @var string The button type.
-     * Valid values for engine styles are 'default', 'red', 'blue', 'green', 'yellow', 'purple', 'dark'.
-     * Valid values for bootstrap styles are 'primary', 'info', 'success', 'warning', 'danger', 'inverse', 'link'.
+     * Valid values for engine styles are 'red', 'blue', 'green', 'yellow', 'purple'.
+     * Valid values for bootstrap styles are 'default', 'danger', 'dark', 'info', 'light', 'link', 'primary', 'secondary', 'success', 'warning'.
      */
     public $type = self::TYPE_DEFAULT;
     public $combine;
@@ -103,6 +102,7 @@ class Button extends \yii\bootstrap\Button
         self::TYPE_DARK,
         self::TYPE_INFO,
         self::TYPE_LIGHT,
+        self::TYPE_LINK,
         self::TYPE_PRIMARY,
         self::TYPE_SECONDARY,
         self::TYPE_SUCCESS,
