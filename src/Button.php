@@ -89,6 +89,8 @@ class Button extends \yii\bootstrap\Button
 
     public $circle = false;
 
+    public $upper = false;
+
     private $_sizes = [
         self::SIZE_MINI,
         self::SIZE_SMALL,
@@ -128,7 +130,15 @@ class Button extends \yii\bootstrap\Button
             $this->combine = 'outline-' . $this->combine;
         }
 
-        Html::addCssClass($this->options, sprintf('btn-%s', $this->combine));
+        if ($this->label === true)
+        {
+            Html::addCssClass($this->options, 'btn-label-' . $this->combine);
+        }
+
+        if(sprintf('btn-%s', $this->combine) != 'btn-' . $this->type)
+        {
+            Html::addCssClass($this->options, sprintf('btn-%s', $this->combine));
+        }
 
         Html::addCssClass($this->options, $this->color);
 
@@ -150,6 +160,11 @@ class Button extends \yii\bootstrap\Button
         if ($this->circle === true)
         {
             Html::addCssClass($this->options, 'btn-icon btn-circle');
+        }
+
+        if ($this->upper === true)
+        {
+            Html::addCssClass($this->options, 'btn-upper');
         }
 
         if(!isset($this->options['type']) && ($this->tagName == 'button' || $this->tagName == 'input'))
