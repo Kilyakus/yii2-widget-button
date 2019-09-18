@@ -6,27 +6,23 @@ use yii\base\InvalidConfigException;
 use yii\helpers\Html;
 use yii\helpers\Inflector;
 
-/**
- * Button renders a engine button.
- *
- * For example,
- *
- * ```php
- * echo Button::widget([
- *     'title' => 'label',
- *     'icon' => 'fa fa-cog',
- *     'iconPosition' => Widget\Button::ICON_POSITION_LEFT,
- *     'type' => Widget\Button::TYPE_PRIMARY,
- *     'size' => Widget\Button::SIZE_MINI,
- *     'disabled' => false,
- *     'block' => false,
- *     'outline' => true,
- *     'hover' => true,
- *     'circle' => true,
- *     'options' => ['type' => 'submit'],
- * ])
- * ```
- */
+/*
+    For example:
+    
+    echo Button::widget([
+        'title' => 'label',
+        'icon' => 'fa fa-cog',
+        'iconPosition' => Widget\Button::ICON_POSITION_LEFT,
+        'type' => Widget\Button::TYPE_PRIMARY,
+        'size' => Widget\Button::SIZE_MINI,
+        'disabled' => false,
+        'block' => false,
+        'outline' => true,
+        'hover' => true,
+        'circle' => true,
+        'options' => ['type' => 'submit'],
+    ])
+*/
 class Button extends \yii\bootstrap\Button
 {
     public $pluginName = 'button';
