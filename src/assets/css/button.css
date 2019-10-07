@@ -276,9 +276,9 @@ input.btn.btn-label-linkedin {cursor:pointer !important;}
   .btn.btn-icon [class^="socicon-"],
   .btn.btn-icon [class*=" socicon-"] {line-height:1;}
   .btn.btn-icon {height:3rem;width:3rem;}
-  .btn.btn-icon.btn-xs, .btn-group-xs > .btn.btn-icon {height:1.5rem;width:1.5rem;}
-  .btn.btn-icon.btn-sm, .btn-group-sm > .btn.btn-icon {height:2.5rem;width:2.5rem;}
-  .btn.btn-icon.btn-lg, .btn-group-lg > .btn.btn-icon {height:4rem;width:4rem;}
+  .btn.btn-icon.btn-xs, .btn-group-xs > .btn.btn-icon {height:1.5rem;width:1.5rem;min-width:1.5rem;}
+  .btn.btn-icon.btn-sm, .btn-group-sm > .btn.btn-icon {height:2.5rem;width:2.5rem;min-width:2.5rem;}
+  .btn.btn-icon.btn-lg, .btn-group-lg > .btn.btn-icon {height:4rem;width:4rem;min-width:4rem;}
   .btn.btn-icon.btn-icon-sm [class^="la-"],
   .btn.btn-icon.btn-icon-sm [class*=" la-"] {font-size:1.25rem;}
   .btn.btn-icon.btn-icon-sm [class^="fa-"],
