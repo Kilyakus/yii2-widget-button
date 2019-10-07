@@ -173,7 +173,8 @@ class Button extends \yii\bootstrap\Button
 
         if ($this->icon !== null)
         {
-            $icon = Html::tag('i', '', ['class' => $this->icon]);
+            $paddings = $title ? '' : 'pr-0'; 
+            $icon = Html::tag('i', '', ['class' => $this->icon . ' ' . $paddings]);
             $title = strcasecmp($this->iconPosition, self::ICON_POSITION_LEFT) === 0 ? sprintf('%s %s', $icon, $title) : sprintf('%s %s', $title, $icon);
         }
 

@@ -10,6 +10,7 @@
     ],
     "require": {
         "yiisoft/yii2": "*",
+        "kilyakus/yii2-library-base": "*",
         "kilyakus/yii2-widget-base": "*"
     },
     "autoload": {
