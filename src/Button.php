@@ -38,6 +38,7 @@ class Button extends \yii\bootstrap\Button
 	const TYPE_SECONDARY = 'secondary';
 	const TYPE_SUCCESS = 'success';
 	const TYPE_WARNING = 'warning';
+	const TYPE_TRANSPARENT = 'transparent';
 
 	const SIZE_MINI = 'xs';
 	const SIZE_SMALL = 'sm';
@@ -107,6 +108,7 @@ class Button extends \yii\bootstrap\Button
 		self::TYPE_SECONDARY,
 		self::TYPE_SUCCESS,
 		self::TYPE_WARNING,
+		self::TYPE_TRANSPARENT,
 	];
 
 	/**
