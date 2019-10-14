@@ -16,7 +16,7 @@
     .btn-outline-transparent:not(:disabled):not(.disabled):active:focus, .btn-outline-transparent:not(:disabled):not(.disabled).active:focus,
     .show > .btn-outline-transparent.dropdown-toggle:focus {box-shadow:0 0 0 0.2rem rgba(225, 225, 239, 0.5);}
 
-.btn-transparent {background-color:transparent;border:1px solid #e2e5ec;color:#FFF;}
+.btn-transparent {background-color:transparent;border:1px solid rgba(255,255,255,0.2);color:#FFF;}
   .show > .btn-transparent.dropdown-toggle, .btn-transparent:focus, .btn-transparent.active, .btn-transparent:active, .btn-transparent:hover {background-color:rgba(255,255,255,0.2);color:#FFF;border-color:#FFF;}
 
 .btn.btn-outline-transparent {color:#494988;}
