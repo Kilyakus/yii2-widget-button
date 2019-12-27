@@ -1,7 +1,10 @@
 # How to use:
 
+```
 use kilyalus\button\Button;
+```
 
+```
 echo Button::widget([
 	'title' => 'label',
 	'icon' => 'fa fa-cog',
@@ -17,3 +20,4 @@ echo Button::widget([
 		'type' => 'submit'
 	],
 ])
+```
