@@ -49,19 +49,10 @@ class Button extends \yii\bootstrap\Button
 
 	public $title;
 
-	/**
-	 * @var string The button size.
-	 * Valid values are 'xs', 'sm', 'lg'.
-	 */
 	public $size;
 
-	/**
-	 * @var string The button type.
-	 * Valid values for engine styles are 'red', 'blue', 'green', 'yellow', 'purple'.
-	 * Valid values for bootstrap styles are 'default', 'danger', 'dark', 'info', 'light', 'link', 'primary', 'secondary', 'success', 'warning'.
-	 */
 	public $type = self::TYPE_DEFAULT;
-	public $combine;
+	protected $combine;
 
 	public $color = '';
 
