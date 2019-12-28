@@ -49,10 +49,19 @@ class Button extends \yii\bootstrap\Button
 
 	public $title;
 
+	/**
+	 * @var string The button size.
+	 * Valid values are 'xs', 'sm', 'lg'.
+	 */
 	public $size;
 
+	/**
+	 * @var string The button type.
+	 * Valid values for engine styles are 'red', 'blue', 'green', 'yellow', 'purple'.
+	 * Valid values for bootstrap styles are 'default', 'danger', 'dark', 'info', 'light', 'link', 'primary', 'secondary', 'success', 'warning'.
+	 */
 	public $type = self::TYPE_DEFAULT;
-	protected $combine;
+	public $combine;
 
 	public $color = '';
 
@@ -108,6 +117,11 @@ class Button extends \yii\bootstrap\Button
 	public function init()
 	{
 		parent::init();
+
+		if(!empty($this->options['options'])){
+			$this->options = array_merge($this->options, $this->options['options']);
+			unset($this->options['options']);
+		}
 
 		$this->combine = $this->type;
 
