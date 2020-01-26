@@ -61,7 +61,8 @@ class Button extends \yii\bootstrap\Button
 	 * Valid values for bootstrap styles are 'default', 'danger', 'dark', 'info', 'light', 'link', 'primary', 'secondary', 'success', 'warning'.
 	 */
 	public $type = self::TYPE_DEFAULT;
-	public $combine;
+
+	public $submit = false;
 
 	public $color = '';
 
@@ -95,6 +96,8 @@ class Button extends \yii\bootstrap\Button
 		self::SIZE_SMALL,
 		self::SIZE_LARGE,
 	];
+	
+	protected $combine;
 
 	protected static $_inbuiltTypes = [
 		self::TYPE_DEFAULT,
@@ -121,6 +124,11 @@ class Button extends \yii\bootstrap\Button
 		if(!empty($this->options['options'])){
 			$this->options = array_merge($this->options, $this->options['options']);
 			unset($this->options['options']);
+		}
+
+		if ($this->submit === true)
+		{
+			$this->options['type'] = 'submit';
 		}
 
 		$this->combine = $this->type;
@@ -195,7 +203,9 @@ class Button extends \yii\bootstrap\Button
 			$title = strcasecmp($this->iconPosition, self::ICON_POSITION_LEFT) === 0 ? sprintf('%s %s', $icon, $title) : sprintf('%s %s', $title, $icon);
 		}
 
+		echo '<!-- begin:: Widgets/Button -->';
 		echo Html::tag($this->tagName, $title, $this->options);
+		echo '<!-- end:: Widgets/Button -->';
 
 		$this->registerPlugin('button');
 		$this->registerAssets();
