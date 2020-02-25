@@ -171,7 +171,7 @@ input[type="button"].btn-block {width:100%;}
 a.btn.btn-label,
 button.btn.btn-label,
 input.btn.btn-label {cursor:pointer !important;}
-  .btn.btn-link:focus, .btn.btn-link:hover, .btn.btn-link.active,
+  /* .btn.btn-link:focus, .btn.btn-link:hover, .btn.btn-link.active, */
   a.btn.btn-label:focus,
   a.btn.btn-label:hover,
   a.btn.btn-label.active,
